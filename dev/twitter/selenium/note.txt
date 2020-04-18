@@ -1,0 +1,7 @@
+Necessário saber quais os campos do CSV da outra API para conseguir compactuar o output das duas API.
+
+Uma vai trazer dados para treinar o modelo de ML.
+Outra vai apanhar dados para serem verificado.
+
+Usos substancialmente diferentes, no entanto os dados têm que vir no mesmo formato.
+(Não só por uma questão de consistência, mas também porque é necessário que assim seja)

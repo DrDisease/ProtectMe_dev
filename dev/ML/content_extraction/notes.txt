@@ -1,0 +1,12 @@
+APIs da Google são desaconselháveis.
+É necessário uma subscrição com pagamento. É uma quantia muito infima inicialmente mas facilmente
+pode escalar para valores elevados.
+Acho preferivel usar os serviços da microsoft, dado que temos um plafond de 200$ para gastar nos 
+serviços de Azure.
+
+
+Microsoft Azure Computer Vision
+Microsoft Azure Speech
+
+A nivel de NLP, talvez seja mais pratico usar inicialmente o Spacy para extração de conteudo meta
+textual e depois considerar se vale ou não a pena usar outra API para tratar os dados.
