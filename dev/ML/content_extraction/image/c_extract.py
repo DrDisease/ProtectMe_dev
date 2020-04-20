@@ -1,1 +1,0 @@
-from azure.cognitiveservices.vision.computervision import ComputerVisionClient
