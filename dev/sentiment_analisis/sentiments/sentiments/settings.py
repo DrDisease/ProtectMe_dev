@@ -25,7 +25,7 @@ SECRET_KEY = 'mu(*n*7#umjjm-aa1$=l!@i*tl@#kqon+ra*zubykzuraq3a$v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['danimag-7e120f6b.localhost.run','127.0.0.1']
+ALLOWED_HOSTS = ['danimag-7e120f6b.localhost.run','127.0.0.1','192.168.1.7kto']
 
 
 # Application definition
