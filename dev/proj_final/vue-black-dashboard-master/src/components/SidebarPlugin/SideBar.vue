@@ -6,9 +6,9 @@
             Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
         -->
     <!-- -->
-    <div class="sidebar-wrapper" id="style-3">
+    <div class="sidebar-wrapper"  id="style-3">
       <div class="logo">
-        <a href="/"
+        <a href="#/"
            aria-label="sidebar mini logo"
            class="simple-text logo">
           <div class="logo-img"

@@ -5,6 +5,11 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 
 const Initial = () => import(/* webpackChunkName: "initial" */"@/pages/Initial.vue");
+const Dash_tweet = () => import(/* webpackChunkName: "tweet" */"@/pages/Dash_tweet.vue");
+const Search_topico = () => import(/* webpackChunkName: "searchtopico" */"@/pages/Search_topico.vue");
+const Search_tweet = () => import(/* webpackChunkName: "searchtweet" */"@/pages/Search_tweet.vue");
+const Dash_topico = () => import(/* webpackChunkName: "topico" */"@/pages/Dash_topico.vue");
+const About = () => import(/* webpackChunkName: "about" */"@/pages/About.vue");
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
 const Notifications = () => import(/* webpackChunkName: "common" */"@/pages/Notifications.vue");
@@ -24,6 +29,31 @@ const routes = [
         path: "initial",
         name: "initial",
         component: Initial
+      },
+      {
+        path: "searchtweet",
+        name: "searchtweet",
+        component: Search_tweet
+      },
+      {
+        path: "searchtopico",
+        name: "searchtopico",
+        component: Search_topico
+      },
+      {
+        path: "tweet",
+        name: "tweet",
+        component: Dash_tweet
+      },
+      {
+        path: "topico",
+        name: "topico",
+        component: Dash_topico
+      },
+      {
+        path: "about",
+        name: "about",
+        component: About
       },
       {
         path: "dashboard",

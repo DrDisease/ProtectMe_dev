@@ -1,0 +1,27 @@
+<template>
+  <div>
+  <card>
+      <form @submit.prevent>
+        <base-input label="Search Topic:"
+                    type="topic_link"
+                    placeholder="Enter topic">
+            <small slot="helperText" id="emailHelp" class="form-text text-muted">Eg: portugal, europe, corona, riot...</small>
+        </base-input>
+      <a href= /#/topico>
+      <base-button class="animation-on-hover" type="primary" style="display:block; ">SEARCH TWEET</base-button>
+      </a>
+      </form>
+  </card>
+  <img src="../assets/img/us_wine.png" style="position: absolute;margin: auto;top: 0;left: 240px;right: 0;bottom: -200px;">
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'searchtopico',
+  data() {
+    return {};
+  }
+};
+</script>
+<style></style>

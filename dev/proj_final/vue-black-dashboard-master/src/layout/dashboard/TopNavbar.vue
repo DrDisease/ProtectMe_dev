@@ -13,7 +13,7 @@
             <span class="navbar-toggler-bar bar3"></span>
           </button>
         </div>
-        <a class="navbar-brand" href="#pablo">ProtectME!</a>
+        <a class="navbar-brand" href="#/">ProtectME!</a>
       </div>
 
       <collapse-transition>

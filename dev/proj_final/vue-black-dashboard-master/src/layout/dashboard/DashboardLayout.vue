@@ -2,12 +2,42 @@
   <div class="wrapper">
     <side-bar>
       <template slot="links">
-       
+        <br>
+        <br>
         <div>
-        <base-button class="animation-on-hover" type="default" style="display:block;margin:auto;  left:0; right:0">SEARCH</base-button>
+          <a href = /#/searchtopico>
+          <base-button class="animation-on-hover" type="default" style="display:block;  margin:auto;  left:0; right:0">SEARCH TOPIC</base-button>
+          </a>
         </div>
+        <br>
+        <br>
         <div>
-        <base-button class="animation-on-hover" type="default" style="display:block;margin:auto;  left:0; right:0">SEARCH </base-button>
+          <a href = /#/searchtweet>
+          <base-button class="animation-on-hover" type="default" style="display:block;margin:auto;  left:0; right:0">SEARCH TWEET</base-button>
+          </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div>
+          <a href = /#/about>
+          <base-button class="animation-on-hover" type="warning" style="display:block; margin:auto;  left:0; right:0">ABOUT </base-button>
+          </a>
         </div>
     
       </template>
