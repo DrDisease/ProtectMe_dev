@@ -8,7 +8,7 @@
             <small slot="helperText" id="emailHelp" class="form-text text-muted">Eg: portugal, europe, corona, riot...</small>
         </base-input>
       <a href= /#/topico>
-      <base-button class="animation-on-hover" type="primary" style="display:block; ">SEARCH TWEET</base-button>
+      <base-button class="animation-on-hover" type="primary" style="display:block; ">SEARCH TOPIC</base-button>
       </a>
       </form>
   </card>
