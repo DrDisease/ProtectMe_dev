@@ -11,7 +11,7 @@ from rest_framework.decorators import action
 class TweetTopicViewSet(viewsets.ModelViewSet):
     queryset = TweetTopic.objects.all()
     serializer_class = TweetTopicSerializer
-    permission_classes = (AllowAny)
+    permission_classes = [AllowAny]
     
     @action(methods=['POST'], detail=True)
     def getTweetT(self,request,pk=None):
@@ -56,4 +56,4 @@ class TweetTopicViewSet(viewsets.ModelViewSet):
 class TweetViewSet(viewsets.ModelViewSet):
     queryset = Tweet.objects.all()
     serializer_class = TweetSerializer
-    permission_classes = (AllowAny)
+    permission_classes = [AllowAny]
