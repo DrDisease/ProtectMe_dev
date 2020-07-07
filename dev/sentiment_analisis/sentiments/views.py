@@ -2,6 +2,10 @@ from _cffi_backend import typeof
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from monkeylearn import MonkeyLearn
+from twitter_handler import TwitterClient
+
+
+client = TwitterClient()
 
 
 def main(request):
@@ -9,10 +13,12 @@ def main(request):
     text = request.POST.get('textfield')
 
     data2 = [text]
+    
+    testdata = client.get_tweet(data2).full_text
 
     try:
         response = ml.classifiers.classify(
-            model_id='cl_Jx8qzYJh', data=data2
+            model_id='cl_Jx8qzYJh', data=testdata
         )
 
         tparams = {
