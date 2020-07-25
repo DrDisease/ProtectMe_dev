@@ -38,7 +38,7 @@ def extract_metadata(img):
             lst.append(meta)
         return lst
     else:
-        return ""
+        return None
 
 
 if __name__ == "__main__":

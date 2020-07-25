@@ -57,5 +57,6 @@ def analyse_img(img):
             strng = ('{:.3f} -> {}'.format(probs[i], classes[idx[i]]))
             lst.append(strng)
         return lst
+    #TODO: CHANGE THIS SHIT TO RETURN ACTUAL OUTPUT
     else:
         return ""

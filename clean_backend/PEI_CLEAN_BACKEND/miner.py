@@ -62,8 +62,9 @@ def insert_analysis(id):
     db_insert(add_analysis(id))
 
 def insert_media(tweet_id,media_lst):
-    for m in media_lst:
-        db_insert(add_media(tweet_id,m))
+    if media_lst is not None:
+        for m in media_lst:
+            db_insert(add_media(tweet_id,m))
 
 def insert_result(id,analysis_data):
     aid = db_insert("SELECT * FROM ANALYSIS WHERE tweet_id like '"+str(id)+"' ORDER BY analysis_date DESC").fetchall()[0][0]
@@ -75,40 +76,43 @@ def insert_result(id,analysis_data):
 
 
 def singlemine(id):
-    #Insert tweet into the database
-    insert_tweet(id)
-    #Analyze data
-    analysis = analyze(id)
-    #Insert Keywords
-    keywords=[]
-    keywords.append(analysis['monkey']['topic'])
-    for k in analysis['spacy']['keywords']:
-        keywords.append(k)
-    insert_keywords(keywords)
-    for k in keywords:
-        key = keyword_id(k)
-        insert_related(id,key)
-    insert_media(id,get_media(id))
-    insert_analysis(id)
-    insert_result(id,analysis)
+    try:
+        #Insert tweet into the database
+        insert_tweet(id)
+        #Analyze data
+        analysis = analyze(id)
+        #Insert Keywords
+        keywords=[]
+        keywords.append(analysis['monkey']['topic'])
+        for k in analysis['spacy']['keywords']:
+            keywords.append(k)
+        insert_keywords(keywords)
+        for k in keywords:
+            key = keyword_id(k)
+            insert_related(id,key)
+        insert_media(id,get_media(id))
+        insert_analysis(id)
+        insert_result(id,analysis)
+    except:
+        return
 
 
 def mine_topics(tlist,num,continuous=False):
     if continuous == False:
         tweets = []
         for t in tlist:
-            tweets.append(search_single_topic(t,num))
-        #remove duplicate tweets
-        tweets = list(set(tweets))
+            status = search_single_topic(t,num)
+            for s in status:
+                tweets.append(s[0])
         for t in tweets:
             singlemine(t)
     else:
         while True:
             tweets = []
             for t in tlist:
-                tweets.append(search_single_topic(t,num))
-            #remove duplicate tweets
-            tweets = list(set(tweets))
+                status = search_single_topic(t,num)
+                for s in status:
+                    tweets.append(s[0])
             for t in tweets:
                 singlemine(t)
     
@@ -122,3 +126,4 @@ handler = TwitterClient()
 
 #test tweet:
 #singlemine(1275150247782543360)
+mine_topics(['COVID19','Trump','Racism','Politics','Economy'],100,continuous=True)

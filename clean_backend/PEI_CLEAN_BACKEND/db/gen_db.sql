@@ -1,7 +1,17 @@
-USE PROTECTME
+CREATE DATABASE PROTECTME;
+use PROTECTME;
+use master;
 GO
 
+DROP TABLE dbo.ANALYSIS
+DROP TABLE dbo.MEDIA
+DROP TABLE dbo.RELATED
+DROP TABLE dbo.RESULT
+DROP TABLE dbo.TOPICS
+DROP TABLE dbo.TWEETS
 
+
+use PROTECTME;
 CREATE TABLE TWEETS(
 	id varchar(30) PRIMARY KEY,
 	thread_id int,
@@ -47,3 +57,21 @@ CREATE TABLE RESULT(
 
 -- Checks if data stored in media analysis field is formatted as a json file
 Alter table RESULT ADD CONSTRAINT [retrieved_data RECORD should be formatted as JSON] CHECK (ISJSON(res)=1)
+
+
+CREATE LOGIN teste WITH PASSWORD = 'Testeeeeeeeee.';
+GO
+
+CREATE USER teste FROM LOGIN teste;
+
+EXEC sp_addrolemember 'db_owner', 'teste';
+
+SELECT * FROM dbo.TWEETS
+
+SELECT * FROM dbo.ANALYSIS
+
+SELECT * FROM dbo.TOPICS
+
+SELECT * FROM dbo.RESULT WHERE framework='monkeylearn'
+
+SELECT * FROM dbo.MEDIA

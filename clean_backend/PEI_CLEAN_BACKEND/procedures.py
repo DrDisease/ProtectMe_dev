@@ -62,6 +62,10 @@ def add_media(tweet_id,media):
 #retrieved_data json_str
 
 def add_result(aid,framework,a_data):
+    print(a_data)
+    str(a_data).replace('"',"'")
     encoded = json.dumps(a_data)
+    print(encoded)
+    json.loads(encoded)
     query = "INSERT INTO RESULT VALUES('"+str(aid)+"','"+framework+"','"+str(encoded)+"')"
     return query

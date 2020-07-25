@@ -99,8 +99,8 @@ def similarity(text1,text2):
     for w in lst2:
         comp2 = comp2 + w + " "
     # generating token lists
-    vec1 = nlp(comp1)
-    vec2 = nlp(comp2)
+    vec1 = vectors(comp1)
+    vec2 = vectors(comp2)
     # temp accumulator
     accum = []
     # iterating over tokens
